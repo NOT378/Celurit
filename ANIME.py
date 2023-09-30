@@ -570,8 +570,6 @@ def memulai():
 	except:pass
 	try:os.mkdir('CP')
 	except:pass
-	try:os.mkdir('data')
-	except:pass
 	login_baz()
 if __name__=='__main__':
 	try:os.system('git pull')
