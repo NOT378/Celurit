@@ -568,12 +568,12 @@ def setting():
 	if hc in ['1','01']:
 		method.append('mobile')
 	elif hc in ['2','02']:
-#		method.append('free')
-#	elif hc in ['3','03']:
-#		method.append('touch')
-#	elif hc in ['4','04']:
-#		method.append('mbasic')
-#	else:
+	        method.append('free')
+	elif hc in ['3','03']:
+		method.append('touch')
+	elif hc in ['4','04']:
+		method.append('mbasic')
+	else:
 		method.append('mobile')
 	print('')
 #	_jembot_ = input('>> Tambahkan Aplikasi Terkait ( Y/t ) ')
