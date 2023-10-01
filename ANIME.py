@@ -559,7 +559,7 @@ def setting():
 	else:
 		print('>> Pilih Yang Bener Kontooll ')
 		exit()
-	print('>> 1. Validate ')
+	print('>> 1. Mobile ')
 #	print('>> 2. Mbasic ')
 #	print('>> 3. Touch  ')
 #	print('>> 4. Mtouch ')
@@ -569,8 +569,8 @@ def setting():
 		method.append('mobile')
 	elif hc in ['2','02']:
 	        method.append('free')
-	elif hc in ['3','03']:
-		method.append('touch')
+	#elif hc in ['3','03']:
+		#method.append('touch')
 	elif hc in ['4','04']:
 		method.append('mbasic')
 	else:
